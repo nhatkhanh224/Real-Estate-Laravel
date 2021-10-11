@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomePageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('web/homepage');
 });
 Route::get('/home', function () {
     return view('home');
@@ -27,4 +28,8 @@ Route::prefix('category')->group(function () {
     Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('categories.edit'); 
     Route::post('/update/{id}', [CategoryController::class, 'update'])->name('categories.update');  
     Route::get('/delete/{id}', [CategoryController::class, 'delete'])->name('categories.delete');      
+});
+Route::prefix('homepage')->group(function () {
+    Route::get('/submit-property-page', [HomePageController::class, 'submitPropertyPage'])->name('homepage.submitPropertyPage');  
+    Route::post('/submit-property', [HomePageController::class, 'submitProperty'])->name('homepage.submitProperty');  
 });
