@@ -31,5 +31,6 @@ Route::prefix('category')->group(function () {
 });
 Route::prefix('homepage')->group(function () {
     Route::get('/submit-property-page', [HomePageController::class, 'submitPropertyPage'])->name('homepage.submitPropertyPage');  
-    Route::post('/submit-property', [HomePageController::class, 'submitProperty'])->name('homepage.submitProperty');  
+    Route::post('/submit-property', [HomePageController::class, 'submitProperty'])->name('homepage.submitProperty');
+    Route::post('/get-district', [HomePageController::class, 'getDistrict'])->name('homepage.getDistrict');    
 });

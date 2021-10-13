@@ -5,11 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Property extends Model
+class LocationProperty extends Model
 {
     use HasFactory;
     protected $guarded = []; 
-    public function images(){
-        return $this->hasMany(ImageProperty::class,'properties_id');
-    }
 }
