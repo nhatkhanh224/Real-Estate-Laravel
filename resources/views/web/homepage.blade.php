@@ -5,7 +5,7 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active item-bg">
-                <img class="d-block w-100 h-100" src="http://placehold.it/1920x1050" alt="banner">
+                <img class="d-block w-100 h-100" src="https://reti.vn/blog/wp-content/uploads/2020/11/Nhung-thach-thuc-lon-cho-thi-truong-bat-dong-san-nam-2020-..jpg" alt="banner">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container-fluid b1-inner-2">
                         <div class="t-left">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="carousel-item item-bg">
-                <img class="d-block w-100 h-100" src="http://placehold.it/1920x1050" alt="banner">
+                <img class="d-block w-100 h-100" src="https://cdn-mobile.meeyland.com/images/bitmap-2x_832.webp?v=1.2.91" alt="banner">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container-fluid b1-inner-2">
                         <div class="t-left">
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="carousel-item item-bg">
-                <img class="d-block w-100 h-100" src="http://placehold.it/1920x1050" alt="banner">
+                <img class="d-block w-100 h-100" src="https://phuquyland.net/wp-content/uploads/2020/02/1-15651645335071869680987.jpg" alt="banner">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container-fluid b1-inner-2">
                         <div class="t-left">

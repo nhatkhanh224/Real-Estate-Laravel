@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-light rounded">
-                    <a class="navbar-brand logo-2" href="index.html">
+                    <a class="navbar-brand logo-2" href="/">
                         <img src="{{asset('web/assets/img/logos/black-logo.png')}}" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">

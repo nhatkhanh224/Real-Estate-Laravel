@@ -25,7 +25,7 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
   <link type="text/css" rel="stylesheet" href="{{asset('web/assets/css/style.css')}}">
   <link type="text/css" rel="stylesheet" href="{{asset('web/assets/css/skins/default.css')}}">
-  
+
 </head>
 
 <body>
@@ -129,14 +129,11 @@
                     </div>
 
                   </div>
-                 
+
                   <h3 class="heading-3">Detailed Information</h3>
                   <div class="row mb-30">
                     <div class="col-lg-12">
-                      <div class="form-group message">
-                        <label>Detailed Information</label>
-                        <textarea class="form-control" name="discription" placeholder=""></textarea>
-                      </div>
+                      <textarea name="discription" id="editor" cols="30" rows="10"></textarea>
                     </div>
                     <div class="col-lg-4 col-md-4">
                       <div class="form-group">
@@ -263,6 +260,7 @@
 <script src="{{asset('web/assets/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
 <script src="{{asset('web/assets/js/ie-emulation-modes-warning.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
 <!-- Custom JS Script -->
 <script>
 $(document).ready(function() {
@@ -286,6 +284,13 @@ $(document).ready(function() {
     });
   });
 });
+</script>
+<script>
+ClassicEditor
+  .create(document.querySelector('#editor'))
+  .catch(error => {
+    console.error(error);
+  });
 </script>
 
 </html>

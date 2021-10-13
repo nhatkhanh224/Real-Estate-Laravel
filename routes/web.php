@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\HomePageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,12 @@ Route::prefix('category')->group(function () {
     Route::get('/edit/{id}', [CategoryController::class, 'edit'])->name('categories.edit'); 
     Route::post('/update/{id}', [CategoryController::class, 'update'])->name('categories.update');  
     Route::get('/delete/{id}', [CategoryController::class, 'delete'])->name('categories.delete');      
+});
+Route::prefix('property')->group(function () {
+    Route::get('/', [PropertyController::class, 'index'])->name('properties.index');
+    Route::get('/edit/{id}', [PropertyController::class, 'edit'])->name('properties.edit'); 
+    Route::post('/update/{id}', [PropertyController::class, 'update'])->name('properties.update');  
+    Route::get('/delete/{id}', [PropertyController::class, 'delete'])->name('properties.delete');      
 });
 Route::prefix('homepage')->group(function () {
     Route::get('/submit-property-page', [HomePageController::class, 'submitPropertyPage'])->name('homepage.submitPropertyPage');  
