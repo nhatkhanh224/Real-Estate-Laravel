@@ -25,7 +25,11 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
   <link type="text/css" rel="stylesheet" href="{{asset('web/assets/css/style.css')}}">
   <link type="text/css" rel="stylesheet" href="{{asset('web/assets/css/skins/default.css')}}">
-
+  <style>
+  .ck-editor__editable_inline {
+    min-height: 400px;
+  }
+  </style>
 </head>
 
 <body>

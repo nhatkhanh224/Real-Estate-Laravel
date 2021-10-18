@@ -32,7 +32,7 @@
                 <td>{{$property->price}}</td>
                 
                 <td>
-                <a href="" class="btn btn-success">Xem chi tiết</a>
+                <a href="{{route('properties.detail',['id'=>$property->id])}}" class="btn btn-success">Xem chi tiết</a>
                   <a href="" class="btn btn-default">Edit</a>
 
 

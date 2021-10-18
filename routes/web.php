@@ -33,6 +33,7 @@ Route::prefix('category')->group(function () {
 });
 Route::prefix('property')->group(function () {
     Route::get('/', [PropertyController::class, 'index'])->name('properties.index');
+    Route::get('/detail/{id}', [PropertyController::class, 'detail'])->name('properties.detail'); 
     Route::get('/edit/{id}', [PropertyController::class, 'edit'])->name('properties.edit'); 
     Route::post('/update/{id}', [PropertyController::class, 'update'])->name('properties.update');  
     Route::get('/delete/{id}', [PropertyController::class, 'delete'])->name('properties.delete');      
