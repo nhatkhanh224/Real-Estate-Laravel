@@ -32,70 +32,71 @@
               </div>
               @endforeach
             </div>
-            <div class="form-group">
-              <label>Mô tả:</label>
-              <?php echo $property->discription ?>
-            </div>
-            <table class="table">
-              <thead class="thead-light">
-                <tr>
+          </div>
+          <div class="form-group">
+            <label>Mô tả:</label>
+            <?php echo $property->discription ?>
+          </div>
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
 
-                  <th scope="col">Hướng nhà</th>
-                  <th scope="col">Số tầng</th>
-                  <th scope="col">Số phòng ngủ</th>
-                  <th scope="col">Số phòng vệ sinh</th>
-                  <th scope="col">Tuổi căn nhà</th>
-                </tr>
-              </thead>
-              <tbody>
+                <th scope="col">Hướng nhà</th>
+                <th scope="col">Số tầng</th>
+                <th scope="col">Số phòng ngủ</th>
+                <th scope="col">Số phòng vệ sinh</th>
+                <th scope="col">Tuổi căn nhà</th>
+              </tr>
+            </thead>
+            <tbody>
 
-                <tr>
-                  <td>{{$conditions->direction}}</td>
-                  <td>{{$conditions->number_of_floors}}</td>
-                  <td>{{$conditions->number_of_bedrooms}}</td>
-                  <td>{{$conditions->number_of_bathrooms}}</td>
-                  <td>{{$conditions->building_age}}</td>
-                </tr>
+              <tr>
+                <td>{{$conditions->direction}}</td>
+                <td>{{$conditions->number_of_floors}}</td>
+                <td>{{$conditions->number_of_bedrooms}}</td>
+                <td>{{$conditions->number_of_bathrooms}}</td>
+                <td>{{$conditions->building_age}}</td>
+              </tr>
 
-              </tbody>
-            </table>
-            <div class="form-group">
-              <label>Địa chỉ: {{$locations->address}}</label>
-             
-            </div>
-            <table class="table">
-              <thead class="thead-light">
-                <tr>
-
-                  <th scope="col">Tên</th>
-                  <th scope="col">Số điện thoại</th>
-                  <th scope="col">Email</th>
-                  
-                </tr>
-              </thead>
-              <tbody>
-
-                <tr>
-                  <td>{{$contacts->name}}</td>
-                  <td>{{$contacts->phone}}</td>
-                  <td>{{$contacts->email}}</td>
-                  
-                </tr>
-
-              </tbody>
-            </table>
-         
-            <button class="btn btn-primary">Duyệt</button>
-          
-
-
+            </tbody>
+          </table>
+          <div class="form-group">
+            <label>Địa chỉ: {{$locations->address}}</label>
 
           </div>
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+
+                <th scope="col">Tên</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Email</th>
+
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>{{$contacts->name}}</td>
+                <td>{{$contacts->phone}}</td>
+                <td>{{$contacts->email}}</td>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+          <button class="btn btn-primary">Duyệt</button>
+
+
+
 
         </div>
+
       </div>
     </div>
   </div>
+</div>
 
 </div>
 

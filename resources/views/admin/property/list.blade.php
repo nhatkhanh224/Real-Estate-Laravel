@@ -33,10 +33,10 @@
                 
                 <td>
                 <a href="{{route('properties.detail',['id'=>$property->id])}}" class="btn btn-success">Xem chi tiết</a>
-                  <a href="" class="btn btn-default">Edit</a>
+                  <a href="{{route('properties.edit',['id'=>$property->id])}}" class="btn btn-default">Edit</a>
 
 
-                  <a href="" class="btn btn-danger">Delete</a>
+                  <a href="{{route('properties.delete',['id'=>$property->id])}}" class="btn btn-danger">Delete</a>
 
                 </td>
 
@@ -47,7 +47,7 @@
           </table>
         </div>
         <div class="col-md-12">
-
+        {{$properties->links()}}
         </div>
       </div>
 
