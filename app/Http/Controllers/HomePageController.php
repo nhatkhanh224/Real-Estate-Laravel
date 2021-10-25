@@ -110,11 +110,18 @@ class HomePageController extends Controller
     }
     public function properties_details($id){
         $property= $this->property->find($id);
+        $category_menus=$this->category->where('parent_id',0)->get();
         $conditions=ConditionProperty::where('properties_id',$id)->first();
         $locations=LocationProperty::where('properties_id',$id)->first();
         $contacts=ContactProperty::where('properties_id',$id)->first();
         $properties= $this->property->latest()->paginate(2);
-        return view('web.properties_detail',compact('property','conditions','locations','contacts','properties'));
+        return view('web.properties_detail',compact('property','conditions','locations','contacts','properties','category_menus'));
+    }
+    public function properties_lists($slug){
+        $category_menus=$this->category->where('parent_id',0)->get();
+        $category=$this->category->where('slug',$slug)->first();
+        $properties=$this->property->where('category_id',$category->id)->get();
+        return view('web.properties_list',compact('properties','category_menus'));
     }
      
 }

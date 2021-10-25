@@ -37,7 +37,8 @@ Route::prefix('property')->group(function () {
     Route::get('/delete/{id}', [PropertyController::class, 'delete'])->name('properties.delete');      
 });
 Route::get('/',[HomePageController::class, 'index'] );
-Route::get('/properties-details/{id}',[HomePageController::class, 'properties_details'])->name('homepage.detail');;
+Route::get('/properties-details/{id}',[HomePageController::class, 'properties_details'])->name('homepage.detail');
+Route::get('/properties-list/{slug}',[HomePageController::class, 'properties_lists'])->name('homepage.list');;
 Route::prefix('homepage')->group(function () {
     Route::get('/submit-property-page', [HomePageController::class, 'submitPropertyPage'])->name('homepage.submitPropertyPage');  
     Route::post('/submit-property', [HomePageController::class, 'submitProperty'])->name('homepage.submitProperty');
