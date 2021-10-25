@@ -17,9 +17,7 @@ use App\Http\Controllers\HomePageController;
 |
 */
 
-Route::get('/', function () {
-    return view('web/homepage');
-});
+
 Route::get('/home', function () {
     return view('home');
 });
@@ -38,6 +36,8 @@ Route::prefix('property')->group(function () {
     Route::post('/update/{id}', [PropertyController::class, 'update'])->name('properties.update');  
     Route::get('/delete/{id}', [PropertyController::class, 'delete'])->name('properties.delete');      
 });
+Route::get('/',[HomePageController::class, 'index'] );
+Route::get('/properties-details/{id}',[HomePageController::class, 'properties_details'])->name('homepage.detail');;
 Route::prefix('homepage')->group(function () {
     Route::get('/submit-property-page', [HomePageController::class, 'submitPropertyPage'])->name('homepage.submitPropertyPage');  
     Route::post('/submit-property', [HomePageController::class, 'submitProperty'])->name('homepage.submitProperty');

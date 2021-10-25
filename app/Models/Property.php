@@ -21,5 +21,9 @@ class Property extends Model
     {
         return $this->hasMany(ImageProperty::class,'properties_id');
     }
+    public function avatar()
+    {
+        return $this->hasOne(ImageProperty::class,'properties_id');
+    }
    
 }

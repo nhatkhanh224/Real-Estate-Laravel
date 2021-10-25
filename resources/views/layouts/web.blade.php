@@ -194,6 +194,7 @@
   <script src="{{asset('web/assets/js/ie-emulation-modes-warning.js')}}"></script>
   <!-- Custom JS Script -->
   <script src="{{asset('web/assets/js/app.js')}}"></script>
+  @yield('js')
 
 </body>
 

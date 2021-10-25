@@ -9,6 +9,7 @@ use App\Models\ConditionProperty;
 use App\Models\ContactProperty;
 use App\Models\Province;
 use App\Models\District;
+use App\Models\ImageProperty;
 use App\Models\LocationProperty;
 use App\Traits\StorageImageTrait;
 use App\Components\Recursive;
@@ -30,6 +31,10 @@ class HomePageController extends Controller
         $this->contact = $contact;
         $this->condition = $condition;
         $this->location = $location;
+    }
+    public function index(){
+        $properties=$this->property->latest()->paginate(8);
+        return view('web.homepage',compact('properties'));
     }
     public function submitPropertyPage(){
         $htmlOption=$this->getCategory($parentId='');
@@ -99,6 +104,14 @@ class HomePageController extends Controller
             Log::error('Message: ' . $exception->getMessage() . ' --- Line : ' . $exception->getLine());
         }
        
+    }
+    public function properties_details($id){
+        $property= $this->property->find($id);
+        $conditions=ConditionProperty::where('properties_id',$id)->first();
+        $locations=LocationProperty::where('properties_id',$id)->first();
+        $contacts=ContactProperty::where('properties_id',$id)->first();
+        $properties= $this->property->latest()->paginate(2);
+        return view('web.properties_detail',compact('property','conditions','locations','contacts','properties'));
     }
      
 }
