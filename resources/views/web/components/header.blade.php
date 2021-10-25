@@ -39,59 +39,18 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav  justify-content-center">
-                            <li class="nav-item dropdown active">
+                            @foreach ($category_menus as $key => $categoryParent)
+                            <li class="nav-item dropdown {{$key == 0 ? 'active' : '' }}">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Index
+                                    {{$categoryParent->name}}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="index.html">Index 1</a></li>
-                                    <li><a class="dropdown-item" href="index-2.html">Index 2</a></li>
-                                    <li><a class="dropdown-item" href="index-3.html">Index 3</a></li>
-                                    <li><a class="dropdown-item" href="index-4.html">Index 4</a></li>
-                                    <li><a class="dropdown-item" href="index-5.html">Index 5</a></li>
-                                    <li><a class="dropdown-item" href="index-6.html">Index 6</a></li>
-                                    <li><a class="dropdown-item" href="index-7.html">Index 7</a></li>
-                                    <li><a class="dropdown-item" href="index-8.html">Index 8 (Map)</a></li>
-                                    <li><a class="dropdown-item" href="index-9.html">Index 9 (Video)</a></li>
+                                    @foreach ($categoryParent->categoryChildren as $categoryChild)
+                                    <li><a class="dropdown-item" href="index.html">{{$categoryChild->name}}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Properties
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">List Layout</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="properties-list-rightside.html">Right Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-list-leftside.html">Left Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-list-fullwidth.html">Fullwidth</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Grid Layout</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="properties-grid-rightside.html">Right Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-grid-leftside.html">Left Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-grid-fullwidth.html">Fullwidth</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Map View</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="properties-map-rightside-list.html">Map List Right Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-map-leftside-list.html">Map List Left Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-map-rightside-grid.html">Map Grid Right Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-map-leftside-grid.html">Map Grid Left Sidebar</a></li>
-                                            <li><a class="dropdown-item" href="properties-map-full.html">Map FullWidth</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Property Detail</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="properties-details.html">Property Detail 1</a></li>
-                                            <li><a class="dropdown-item" href="properties-details-2.html">Property Detail 2</a></li>
-                                            <li><a class="dropdown-item" href="properties-details-3.html">Property Detail 3</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+                            @endforeach
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Pages

@@ -34,7 +34,8 @@ class HomePageController extends Controller
     }
     public function index(){
         $properties=$this->property->latest()->paginate(8);
-        return view('web.homepage',compact('properties'));
+        $category_menus=$this->category->where('parent_id',0)->get();
+        return view('web.homepage',compact('properties','category_menus'));
     }
     public function submitPropertyPage(){
         $htmlOption=$this->getCategory($parentId='');
