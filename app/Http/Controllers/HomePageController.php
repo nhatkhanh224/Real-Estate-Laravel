@@ -74,10 +74,12 @@ class HomePageController extends Controller
                     ]);
                 }
             }
+            $province=Province::where('id', $request->province_id)->first();
+            $district=District::where('id', $request->district_id)->first();
             $dataPropertyLocations =[
                 'district_id'=>$request->district_id,
                 'province_id'=>$request->province_id,
-                'address' => $request->address,
+                'address' => $request->address."-".$district->_name."-".$province->_name,
                 'properties_id' =>$property->id,
             ];
             $location=$this->location->create($dataPropertyLocations);

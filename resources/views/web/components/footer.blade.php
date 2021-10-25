@@ -3,8 +3,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Get Newsletter</h3>
-                <p>Your download should start automatically, if not Click here. Should I give up, huh?.</p>
+                <h3>ĐĂNG KÝ ĐỂ NHẬN THÔNG TIN MỚI NHẤT</h3>
+                
                 <div class="form-info">
                     <form action="#" method="GET" enctype="multipart/form-data">
                         <div class="row">
@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-12">
                                 <div class="send-btn">
-                                    <button type="submit" class="btn btn-color btn-md btn-message">Get it now</button>
+                                    <button type="submit" class="btn btn-color btn-md btn-message">Đăng ký</button>
                                 </div>
                             </div>
                         </div>

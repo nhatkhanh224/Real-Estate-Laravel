@@ -159,11 +159,12 @@
                       <div class="form-group">
                         <label>Building Age (optional)</label>
                         <select class="selectpicker search-fields" name="building_age">
-                          <option>0-5 Years</option>
-                          <option>0-10 Years</option>
-                          <option>0-15 Years</option>
-                          <option>0-20 Years</option>
-                          <option>0-25 Years</option>
+                          <option>Không xác định</option>
+                          <option>0-5 năm</option>
+                          <option>0-10 năm</option>
+                          <option>0-15 năm</option>
+                          <option>0-20 năm</option>
+                          <option>0-25 năm</option>
                         </select>
                       </div>
                     </div>
@@ -171,6 +172,7 @@
                       <div class="form-group">
                         <label>Bedrooms (optional)</label>
                         <select class="selectpicker search-fields" name="number_of_bedrooms">
+                          <option>Không xác định</option>
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -183,6 +185,7 @@
                       <div class="form-group">
                         <label>Bathrooms (optional)</label>
                         <select class="selectpicker search-fields" name="number_of_bathrooms">
+                          <option>Không xác định</option>
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -195,6 +198,7 @@
                       <div class="form-group">
                         <label>Floors (optional)</label>
                         <select class="selectpicker search-fields" name="number_of_floors">
+                          <option>Không xác định</option>
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
